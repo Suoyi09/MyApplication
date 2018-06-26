@@ -37,29 +37,12 @@ public class NoteMenuActivity extends Activity {
 
         exitButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-
-                AlertDialog.Builder builder=new AlertDialog.Builder(mcontext);
-                builder.setTitle("提示");
-                builder.setMessage("确定要退出程序?");
-                builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                        System.exit(0);
-                        finish();
-                    }
-                });
-                builder.setNeutralButton("取消", new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-                builder.show();
+                Intent i = new Intent(mcontext, MainActivity.class);
+                startActivity(i);
+                finish();
             }
         });
     }
 
 }
+

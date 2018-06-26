@@ -18,4 +18,10 @@
     <string name="title_activity_menu">ActivityMenu</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_note_edit">ActivityNoteEdit</string>
+    <string name="yb">音乐播放器</string>
+    <string name="t1">0:00</string>
+    <string name="t2">0:00</string>
+    <string name="please_enter_delivery_no">请输入快递单号</string>
+    <string name="query">查询</string>
+    <string name="query_url">http://www.kuaidi100.com/query</string>
 </resources>

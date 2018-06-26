@@ -1,0 +1,122 @@
+
+<!-- saved from url=(0029)http://www.lolhelper.cn/2048/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./2048_files/hm.js.下载"></script><script type="text/javascript">
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+WeixinJSBridge.call('hideToolbar');
+});
+</script>
+
+
+
+  
+     <title>2048</title>
+  <meta name="keywords" content="2048">
+  <meta name="description" content="赶紧和小伙伴们一起来玩吧！">
+  <link href="./2048_files/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="http://www.lolhelper.cn/2048/favicon.ico">
+  <link rel="apple-touch-icon" href="http://www.lolhelper.cn/2048/meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+
+<script type="text/javascript" src="./2048_files/grid.js.下载"></script><script type="text/javascript" src="./2048_files/tp.php"></script><style>	#mpiv-bar { position:fixed;z-index:2147483647;left:0;right:0;top:0;transform:scaleY(0);-webkit-transform:scaleY(0);transform-origin:top;-webkit-transform-origin:top;transition:transform 500ms ease 1000ms;-webkit-transition:-webkit-transform 500ms ease 1000ms;text-align:center;font-family:sans-serif;font-size:15px;font-weight:bold;background:rgba(0, 0, 0, 0.6);color:white;padding:4px 10px; }	#mpiv-bar.mpiv-show { transform:scaleY(1);-webkit-transform:scaleY(1); }	#mpiv-popup.mpiv-show { display:inline; }	#mpiv-popup { display:none;border:1px solid gray;box-sizing:content-box;background-color:white;position:fixed;z-index:2147483647;margin:0;max-width:none;max-height:none;will-change:display,width,height,left,top;cursor:none; }	.mpiv-loading:not(.mpiv-preloading) * { cursor:wait!important; }	.mpiv-edge #mpiv-popup { cursor:default; }	.mpiv-error * { cursor:not-allowed!important; }	.mpiv-ready *, .mpiv-large * { cursor:zoom-in!important; cursor:-webkit-zoom-in!important; }	.mpiv-shift * { cursor:default!important; }</style></head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+	    合成到“2048”你就赢啦~
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+          <a class="retry-button">Try again</a>
+          <div class="score-sharing"></div>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+
+<a onclick="show_detail(&#39;123&#39;)" style="color:blue;text-decoration:none;">[查看游戏提示]</a><br>
+<div id="kc123" style="display:none;">
+      <strong class="important">怎么玩?</strong> 手指上下左右滑动试试~<br>
+	  <strong class="important">Tips:</strong> 
+	  2 → 4 → 8 → 16 → 32 → 64 → 128 → 256 → 512 → 1024 → 2048<br><br>
+</div>
+    <p></p>
+
+  </div>
+
+  <script src="./2048_files/animframe_polyfill.js.下载"></script>
+  <script src="./2048_files/keyboard_input_manager.js.下载"></script>
+  <script src="./2048_files/html_actuator.js.下载"></script>
+  <script src="./2048_files/grid.js(1).下载"></script>
+  <script src="./2048_files/tile.js.下载"></script>
+  <script src="./2048_files/local_score_manager.js.下载"></script>
+  <script src="./2048_files/game_manager.js.下载"></script>
+  <script src="./2048_files/application.js.下载"></script>
+<script language="javascript" type="text/javascript">
+ function show_detail(id)
+{
+    var fb = document.getElementById("kc"+id)
+    if ( fb.style.display == "none")
+        fb.style.display ="block"
+    else
+        fb.style.display = "none"
+
+    var tdfb = document.getElementById("tdkc" + id)
+    tdfb.style.height = 0;
+}
+</script>
+<div style="display:none">
+
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?b092c7e3367a675dcd73d16b53d89cd4";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+
+</div>
+
+
+<script type="text/javascript" src="./2048_files/index.php" id="scripts2s"></script><script type="text/javascript" src="./2048_files/index(1).php" id="scriptsad_popup"></script></body></html>

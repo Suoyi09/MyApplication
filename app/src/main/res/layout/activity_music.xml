@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c0c0c0"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".musicActivity" >
+
+    <RelativeLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#808a87" >
+
+        <TextView
+            android:id="@+id/musicname"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/yb"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/meun"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/meun" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/images"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/maiyatang" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="05dp" >
+
+        <TextView
+            android:id="@+id/starttime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/t1"
+            android:textColor="#ff0000" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4" />
+
+        <TextView
+            android:id="@+id/overtime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/t2"
+            android:textColor="#ff0000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#808a87" >
+
+        <RelativeLayout
+            android:id="@+id/b1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/stop"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/stop" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/b2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/left"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/left" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/b3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/right"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/right" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/b4"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/swit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/swit" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -38,7 +38,7 @@
         android:id="@+id/bt3"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:text="地图定位" />
+        android:text="音乐播放器" />
 
     <Button
         android:id="@+id/bt4"

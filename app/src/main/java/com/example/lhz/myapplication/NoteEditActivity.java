@@ -16,13 +16,13 @@ public class NoteEditActivity extends Activity {
     private EditText mTitleText;
     private EditText mBodyText;
     private Long mRowId;
-    private NoteDbAdapter mDbHelper;
+    private DiaryDbAdapter mDbHelper;
     private Context mcontext=this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mDbHelper = new NoteDbAdapter(this);
+        mDbHelper = new DiaryDbAdapter(this);
         mDbHelper.open();
         setContentView(R.layout.activity_note_edit);
 
@@ -36,9 +36,9 @@ public class NoteEditActivity extends Activity {
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            String title = extras.getString(NoteDbAdapter.KEY_TITLE);
-            String body = extras.getString(NoteDbAdapter.KEY_BODY);
-            mRowId = extras.getLong(NoteDbAdapter.KEY_ROWID);
+            String title = extras.getString(DiaryDbAdapter.KEY_TITLE);
+            String body = extras.getString(DiaryDbAdapter.KEY_BODY);
+            mRowId = extras.getLong(DiaryDbAdapter.KEY_ROWID);
 
             if (title != null) {
                 mTitleText.setText(title);
@@ -110,3 +110,4 @@ public class NoteEditActivity extends Activity {
         });
     }
 }
+

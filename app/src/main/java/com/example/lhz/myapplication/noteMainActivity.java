@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
@@ -17,24 +18,30 @@ public class NoteMainActivity extends ListActivity {
     private static final int INSERT_ID = Menu.FIRST;
     private static final int DELETE_ID = Menu.FIRST + 1;
 
-    private NoteDbAdapter mDbHelper;
+    private DiaryDbAdapter mDbHelper;
     private Cursor mDiaryCursor;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_main);
-        mDbHelper = new NoteDbAdapter(this);
+        mDbHelper = new DiaryDbAdapter(this);
         mDbHelper.open();
         renderListView();
-
+        Button allButton = (Button) findViewById(R.id.menu);
+        allButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent i = new Intent(NoteMainActivity.this, NoteMenuActivity.class);
+                startActivityForResult(i, ACTIVITY_CREATE);
+            }
+        });
     }
 
     private void renderListView() {
         mDiaryCursor = mDbHelper.getAllNotes();
         startManagingCursor(mDiaryCursor);
-        String[] from = new String[] { NoteDbAdapter.KEY_TITLE,
-                NoteDbAdapter.KEY_CREATED };
+        String[] from = new String[] { DiaryDbAdapter.KEY_TITLE,
+                DiaryDbAdapter.KEY_CREATED };
         int[] to = new int[] { R.id.text1, R.id.created };
         SimpleCursorAdapter notes = new SimpleCursorAdapter(this,
                 R.layout.activity_note_list, mDiaryCursor, from, to);
@@ -65,6 +72,7 @@ public class NoteMainActivity extends ListActivity {
 
     private void createDiary() {
         Intent i = new Intent(this, NoteEditActivity.class);
+        //startActivity(i);
         startActivityForResult(i, ACTIVITY_CREATE);
     }
 
@@ -74,11 +82,11 @@ public class NoteMainActivity extends ListActivity {
         Cursor c = mDiaryCursor;
         c.moveToPosition(position);
         Intent i = new Intent(this, NoteEditActivity.class);
-        i.putExtra(NoteDbAdapter.KEY_ROWID, id);
-        i.putExtra(NoteDbAdapter.KEY_TITLE, c.getString(c
-                .getColumnIndexOrThrow(NoteDbAdapter.KEY_TITLE)));
-        i.putExtra(NoteDbAdapter.KEY_BODY, c.getString(c
-                .getColumnIndexOrThrow(NoteDbAdapter.KEY_BODY)));
+        i.putExtra(DiaryDbAdapter.KEY_ROWID, id);
+        i.putExtra(DiaryDbAdapter.KEY_TITLE, c.getString(c
+                .getColumnIndexOrThrow(DiaryDbAdapter.KEY_TITLE)));
+        i.putExtra(DiaryDbAdapter.KEY_BODY, c.getString(c
+                .getColumnIndexOrThrow(DiaryDbAdapter.KEY_BODY)));
         startActivityForResult(i, ACTIVITY_EDIT);
     }
 

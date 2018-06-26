@@ -20,7 +20,7 @@
         android:layout_height="75px"
         android:layout_alignBottom="@+id/text1"
         android:layout_alignParentRight="true"
-        android:text="2016年1月3日" />
+        android:text="2018年6月20日" />
 
 
 </RelativeLayout>

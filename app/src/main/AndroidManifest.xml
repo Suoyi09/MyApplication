@@ -9,13 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
-        <activity
-            android:name=".NoteEditActivity"
-            android:label="@string/title_activity_note_edit"></activity>
-        <activity
-            android:name=".NoteMenuActivity"
-            android:label="@string/title_activity_menu"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".preActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +17,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".NoteEditActivity" />
+        <activity android:name=".NoteMainActivity" />
+        <activity android:name=".NoteMenuActivity" />
+        <activity android:name=".Activity2048" />
+        <activity android:name=".calculateActivity" />
+        <activity android:name=".weatherActivity" />
+        <activity android:name=".musicActivity" />
+        <activity android:name=".pinballActivity" />
+        <activity android:name=".EnglishActivity" />
+        <activity android:name=".mobilephoneActivity" />
+        <activity android:name=".DeliveryActivity"></activity>
     </application>
 
 </manifest>

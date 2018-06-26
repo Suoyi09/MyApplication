@@ -4,8 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.net.Uri;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
@@ -27,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(mcontext,NoteMenuActivity.class);
+                Intent i = new Intent(mcontext,calculateActivity.class);
                 startActivity(i);
             }
         });
@@ -36,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                //Intent i = new Intent(mcontext,.class);
-                //startActivity(i);
+                Intent i = new Intent(mcontext,weatherActivity.class);
+                startActivity(i);
             }
         });
         bt3=findViewById(R.id.bt3);
@@ -45,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                //Intent i = new Intent(mcontext,.class);
-                //startActivity(i);
+                Intent i = new Intent(mcontext,musicActivity.class);
+                startActivity(i);
             }
         });
         bt4=findViewById(R.id.bt4);
@@ -54,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                //Intent i = new Intent(mcontext,.class);
-                //startActivity(i);
+                Intent i = new Intent(mcontext,DeliveryActivity.class);
+                startActivity(i);
             }
         });
         bt5=findViewById(R.id.bt5);
@@ -63,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                //Intent i = new Intent(mcontext,.class);
-                //startActivity(i);
+                Intent i = new Intent(mcontext,NoteMainActivity.class);
+                startActivity(i);
             }
         });
         bt6=findViewById(R.id.bt6);
@@ -72,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                //Intent i = new Intent(mcontext,.class);
-                //startActivity(i);
+                Intent i = new Intent(mcontext,mobilephoneActivity.class);
+                startActivity(i);
             }
         });
         bt7=findViewById(R.id.bt7);
@@ -81,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                //Intent i = new Intent(mcontext,.class);
-                //startActivity(i);
+                Intent i = new Intent(mcontext,Activity2048.class);
+                startActivity(i);
             }
         });
         bt8=findViewById(R.id.bt8);
@@ -90,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                //Intent i = new Intent(mcontext,.class);
-                //startActivity(i);
+                Intent i = new Intent(mcontext,pinballActivity.class);
+                startActivity(i);
             }
         });
 
